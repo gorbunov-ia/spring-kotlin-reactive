@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: db/sql/create_test_table.sql

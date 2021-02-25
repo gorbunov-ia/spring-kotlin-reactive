@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class SpringKotlinReactiveApplication
 
 fun main(args: Array<String>) {
-	runApplication<SpringKotlinReactiveApplication>(*args)
+    runApplication<SpringKotlinReactiveApplication>(*args)
 }
