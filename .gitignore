@@ -29,4 +29,5 @@ build/
 .vscode/
 
 ### Docker ###
-docker/.env
+docker/db.env
+docker/service.env

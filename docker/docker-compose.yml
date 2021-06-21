@@ -1,14 +1,39 @@
-version: '3.8'
+version: '2.4'
+#version: '3.8'
 
 services:
   db:
     image: postgres
     env_file:
-      - .env
+      - db.env
     ports:
-      - "5432:5432"
+      - 5432:5432
+    cpus: 1.0
+    mem_limit: 512M
+    memswap_limit: 512M
     volumes:
       - data-volume-postgres:/var/lib/postgresql/data
+  mock:
+    image: spring-reactive-mock
+    env_file:
+      - mock.env
+    ports:
+      - 8090:8090
+    cpus: 1.0
+    mem_limit: 512M
+    memswap_limit: 512M
+  service:
+    image: spring-reactive-service
+    env_file:
+      - service.env
+    ports:
+      - 8080:8080
+    cpus: 1.0
+    mem_limit: 512M
+    memswap_limit: 512M
+    depends_on:
+      db:
+        condition: service_started
 
 volumes:
   data-volume-postgres:
