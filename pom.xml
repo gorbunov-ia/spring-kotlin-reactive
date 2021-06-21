@@ -16,7 +16,7 @@
     </properties>
 
     <modules>
-        <module>spring-kotlin-reactive-service</module>
+        <module>spring-kotlin-web-service</module>
         <module>spring-kotlin-reactive-mock</module>
     </modules>
 

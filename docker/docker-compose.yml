@@ -23,7 +23,7 @@ services:
     mem_limit: 512M
     memswap_limit: 512M
   service:
-    image: spring-reactive-service
+    image: spring-web-service
     env_file:
       - service.env
     ports:
