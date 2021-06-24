@@ -20,8 +20,8 @@ services:
     ports:
       - 8090:8090
     cpus: 1.0
-    mem_limit: 512M
-    memswap_limit: 512M
+    mem_limit: 1024M
+    memswap_limit: 1024M
   service:
     image: spring-web-service
     env_file:
@@ -29,8 +29,8 @@ services:
     ports:
       - 8080:8080
     cpus: 1.0
-    mem_limit: 512M
-    memswap_limit: 512M
+    mem_limit: 1024M
+    memswap_limit: 1024M
     depends_on:
       db:
         condition: service_started
