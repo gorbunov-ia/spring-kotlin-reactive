@@ -14,8 +14,17 @@
 >docker build . -t spring-reactive-service
 >cd ..
 ```
-## run docker compose
+## configure user credentials
 ```
 >cd docker
+>cp template.db.env db.env
+```
+Write your username and password for the database to the `db.env` file.
+```
+>cp template.service.env service.env
+```
+Write the username and password of the database to the `service.env` file.
+## run docker compose
+```
 >docker-compose -p spring-kotlin-reactive up
 ```
